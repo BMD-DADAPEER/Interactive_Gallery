@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Image Gallery | CodeAlpha Task 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="gallery-wrapper">
+        <header class="gallery-header">
+            <h1>Interactive Image Gallery</h1>
+            <p>Click on any image to view larger</p>
+        </header>
+        
+        <!-- Filter Controls & Search Bar Container -->
+        <div class="controls-container">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-target="all">All</button>
+                <button class="filter-btn" data-target="nature">Nature</button>
+                <button class="filter-btn" data-target="mountains">Mountains</button>
+                <button class="filter-btn" data-target="cities">Cities</button>
+                <button class="filter-btn" data-target="waterfalls">Waterfalls</button>
+                <button class="filter-btn" data-target="animals">Animals</button>
+                <button class="filter-btn" data-target="architecture">Architecture</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search images...">
+            </div>
+        </div>
+
+        <!-- Responsive Grid Layout -->
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6CuspbzvCF29kLzO0eQXEg0UOszAMutiZGxUAAed5uQ&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQsVpcstBB2y5hgpo8Nbu653tzAgeC4jcZ5OiWXymkMA&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTufhdrDZLzOxXhK2to3MECCB_TptFpG6tReNyFdUvKiw&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXClQBZ14CuzcLROl3b_vdxKEPnGnQ-udtcqpR-EdX1Q&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3421D59QGyd5PRRwOxbe5phoXmpFkEAJRUPMudp0Hsw&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_h1M17hl2ywGPFpH0iZPbuH8l7aFsqh1NCK9KQsYwdQ&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvMrJ7oN7FDamZ9kQCH2U7Vx_wJy2yM6oxseg0jwrXWw&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvbDwmdzgyFiX2rBSrNeUR6v4OgBaVK59a4-D6RGOeA&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-IjNjGgc1mXIZA093lNnZ981sOx22au9XXAlGp4nWyQ&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://t3.ftcdn.net/jpg/02/94/83/86/360_F_294838696_lTUpGfhDo8UaICuEbDzHQ97sRa1hY1PA.jpg" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx2h6WojHcpB3leuLXL1q27kWUc8HI5Tjsfg&s" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://static.vecteezy.com/system/resources/previews/023/269/969/non_2x/mountain-sunset-landscape-illustration-with-sun-behind-the-mountain-vector.jpg" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXgCBLN8PcsC-J5Z5ymUQrhu8FQZ3lrC1hxf6UyjOYVw&s" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf95GKxp-bYuHnEyd_3sSR21oAbE_l0AjFwxKGYQ0EUA&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGflYFcrTBOlEWaDGDtmaj6-PJMMWJr707WbWGIzEZqw&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9-JISE3cjciF5deKUry9fNxTUmha-dyO5qlaSwY-vug&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPxbUxA0Yb5GOklG08tay_5VOlqmnat5JBVO7poOUJDA&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQStaz9zBzu3TfuKtZ6AZ-jgx66rHEmkJDrGjX_eXftgg&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyteWS2skbKhd3f7WDwt7iSGwPI4iJLx50k_f7zlzrqA&s=10" alt="Lake and Mountains">
+            </div>
+            <div class="gallery-item" data-category="mountains" data-title="Lake and Mountains">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyteWS2skbKhd3f7WDwt7iSGwPI4iJLx50k_f7zlzrqA&s=10" alt="Lake and Mountains">
+            </div>
+            <!--Nature-->
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYOUPP-RVDmJ--IbG2cnDqGLwu0Xm-kLBwFuuqjCj04w&s" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyi75GIMqJHSqTbwMHi5SDsDb1j4ACexh8igO3bAx1dg&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvI55tpGnChX65YhFsd0pyBFPxcdo7x0MNRrAAVpuNoQ&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXCsW10nAjoXFTDiXZW7Y-fPj9YPUX0aDKyIj-R9lhYw&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR576GzHzAOk-7slci2277L3WkOHRBSCN9Jcaml1whCGA&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8Lf_XMIGZBtayJpJNPFmmCALIgEqjfv2qj3bedJAQw&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL6xwb6VBSXF4MF4uju40QZHYq5JiEoVpQ8viHmy4TQA&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9gBnEC75oMt8a3yyD_eoJYnxzFc54hzTq9MCXo8U8Ow&s=10" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJfXNH2vWvn0sVCv-rUe8qPH2dZQZhL50vQTHOn52GGQ&s" alt="Forest">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDw5O4PtmaA1Zrqb_vfYd5jzrFfvSFpP92j1afIqYGyQ&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV0dXeR_aNqAdFsJs9M72ODCETPZfDJ8r45Wg7S1v-8Q&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3DbVE8V6hl41dlU8V4bRog-EhT5ta2L2gRnlcMEqw6Q&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfbBcokaXp8zf8fLrOeuvoCTtKjViRRc5uPoDK4sxgcA&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOa9XOQZC8kCn6Clag4mOWLSviPNQNe4Cp-856y0GaXw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRctQLXTyKeCImuQHgLbjbMO6nzOEtfTFoOp5fYbBloyg&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdpMS_c7GutpsXTUK1YNhhPsE6EEREwr1NMslvjzb_aw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YpInJfWmRMhKLttcng1j6sDlyWsxHr9up4MxSx3c9g&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysy3tQEjldd1aWBAxM0_9YBjSLg_XMcpUSWRHL6_E5w&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLKEnYWnPFoF7aMBWWqHPuMaUdCbzlhV4EAFiN3o9VFg&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="nature" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThqpjc6BlqZzV4dYfdHyuMLhVmAvszCo6Zlns1m-QdOg&s=10" alt="Forest Waterfall">
+            </div>
+            
+            <!--WaterFalls-->
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbITRRTUP5kmEIsTC9gHIvL-Pej3_emsyJ2lr7YBFiHg&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT90kY65EZdPgn4KI3OKQPkUbh-2vrKIoFHjKAAIqYoEw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzBm3C8etuPYgf1BefErA09mvQpafyD-40AzatdyeLYw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeGJLC6v1J0cZvZ906XJGGWw4sCZXsc-kWj1Faoy7HEA&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7W_rZEfKC97jGPW6tpcKaYaAb85OLHDDYtC36vqM_uA&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYc625eB9nSA7zYDgz6zSgoRPIzJcJ5n3O78vAJEvFGw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJ90IWcVgZFtQLrHthiLKiN2Q0LsgKxIsvClQuIIk3g&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6KrSyOtJEBhdD3i4xfy1XLPDwxSSVCtmPO7BzOhKbuw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6q-rk0fU4yNC9mQotwxEYmceBi7Pc8TrnWIaJgxtZ9w&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBSMKOcF6O4o_qvcQN9Xq4KXtraVADfTh1iQ&s" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1zVzoGuUhlJB9nlXVEt530vG9HzNLOOMlg&s" alt="Forest Waterfall">
+            </div>
+            
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZpMC2yNzatLWahVAWTSmfc6qyhxxHM0t-KA&s" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiz3TYgDpMKLHjX21y_rQ3XBibZ-mA5HBMs-7pVHLNDw&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3BNHvEFiTfCMEK_5Af8zgw_LN-rIUtWbs545hm6bK4w&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsZOWxtd7YwYrXJDrdI8w8UODyrCzguf_U9xcOn8X1BA&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoCBnSb1yXiD61Ol8MMDjZ7HekYYPIPj2IPtY4sgMC6w&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnTzFKXlFcIqOnhOjhf5Fz27FmGirVkyacrLLXtgKw4w&s" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT38GYwq-SulaP4LURqyNlYB_do-ILzpybC31hSdZ878Q&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS73nlUJWdoy9-rkfCBddlZD_Z1re5qFSS9JZ5BliR--Q&s=10" alt="Forest Waterfall">
+            </div>
+            <div class="gallery-item" data-category="waterfalls" data-title="Forest Waterfall">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL0TE4c2TCNlKA0NPy5vXaH-Y9bvhAuR9oo1AviL_wng&s=10" alt="Forest Waterfall">
+            </div>
+            <!--Cities-->
+            
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjPlMhhB92-KAXPBhtcWhN7x7FwPhJRsb2VtMtJ6zvJg&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuEVXbJvhjh81uTy2jTDW-UYVNu_LiNehlH_2Df5XZsQ&s" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGvFEQHdx2NRg64i9-dM1OMehGmLfrlCjqewUQfEBlNg&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS373TbUAB-RrJoVHUkJEaFbMTr2tE7-YxEoa-oIn6gUg&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGi2cRszAJK5-Vb7yckPEF5Gxo47_AqpkXrPnAJdtfcw&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvllWXOijm_L6d3hTP8bzGDbzf-sZC8M-79jqy9h1aQ&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIhqlhIzN-kwFgVqKVtRUqTJcb7bf3tv-WWO8j4HGSdw&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnYis5x8LtWG3Rd9f-MYboBw6Yafn8ZnGKZpqcROxYdg&s=10" alt="City Skyline Night">
+            </div>
+            
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnjLx10v9XmwJAjgXVKFhQUaoCVmlN-mDOBcuv_ZqRlyCICjsgeXSSKZZoLK-ClZUT0Ms&s" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh2VoNmRFmWatxh5sh1VfZ0L_FM8fdEwijDVelxDwIofkZmEbq2Q-qp2E&s" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScQGogGgtotNi1LR9mCv-FiFGBbDaYspUcgeGtv9ndFQ&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd9yuNuZ1FACrh7egko_z-Qo3Gnkk6nHDp2a0PFl9UcA&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_zB94x4Rfwm2v4ujrMK7_R2pYH4LvNmZu2o-jiHeK7g&s" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdgS7nw4zHr_UIOMn-aDZ2kjDo8wdmdFfwQLful0OihA&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShZmDY-q7h492hnQYW8u-_km_yS9u6DYquFxEVSDxfug&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDKrfwyI-u3f54UCIpM-ijpjwEjWeJ58qu8me_Hp8wYA&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5qfgNzYqqiFjBgwvnVlq1EwtIC6EJjyqAS6uHSNdn2Q&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5SH2LcQvvUksava9iCheREuJ7JZkKZAxLywiK3Q-IYA&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz1b1ptPifxRCIw4u5cf0E0iD9aLPKwoDzCjEfPkpv-g&s=10" alt="City Skyline Night">
+            </div>
+            <div class="gallery-item" data-category="cities" data-title="City Skyline Night">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn0KJtvp0bIdSKn81D1XS3nz5GM9_4QMEk3itCDYgZKIik5lMhObiZzg&s" alt="City Skyline Night">
+            </div>
+            <!--Animals-->
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-x1f-99HbIHpz6nP_9AySNLMuVpO_nYegQ9JAJDEx8g&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuZ3CVtFFVe_DtvtZIEdJ2g5lMMHreBURlGwDVxsfgA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUZKTzesiloMrJfQIazVFDXVyBtExdH3Q0r8EzfqtehQ&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTet2zlkiVyum6_aQyhyNFDrogig_kHHUZ6uD2IpSKtDA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS3BK-zlCqfCg4WJZzcQyndZlsb7JjEHsIg3kaRS1l5A&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQJ31qUh0DpBafOuf-gFjGJlJyOzZfvK-dziVL9g_QJA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHeaIETfe0KjURTqpFOz4DYF_2qRP8JDXZ6wzO2kda6Q&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzGZ_WkknJCArb5JdpK3o3bI_7He_JimPiRdrrWhQisw&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiR1MKqflBwKZKWmd753i0bCr2437HlNHPS9BjV0676g&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvVfKVod6rNuGHpe6hWHjhF3TgnmGzke5tPsihmzgm9Q&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVe-EiBNMBcu5c4HPQlGtCfJbIWdQgpN_gkCxv2B5RDQ&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfiAZ64ulQWFNLfO6PGacN30fzbgWDbw8FnraEJg1pCA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRymuHT4zExxBiNPC8E5Hb-aaUfBjHGL_Bh5fwsfrbdNg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQndztgxERWGhnx97jGMxhWd2txlGpo49Ha3TeTDXbUvw&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR06_GJ4SMCWnlGNw5mtNgcaLeAjQxiVma0Tbn3b0D7wg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG9uXGEbOiqTYOLSHFY9pDOWhs-KMjEGVx3BaEpfhuGQ&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMhLNtmu98INOEm3txWQ1TgXceAAOez6icsPwm9ei0lA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqmWyqrRqKxQcwsV7FLhldxwae6jJlb3DunBQ9xT7jEA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_c1S4SuE0UkwfxAQpn1TNa1TAkhBqjqeDGo4Etkds6w&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="animals" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFjwzLdxITudV1BjZiwFBpe07ZYaOQ25OdQ2xvl-wOFQ&s=10" alt="Golden Retriever">
+            </div>
+            <!--Architecture-->
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWmYbkPZYK5Uu3mS8OkY0O_AL7laaQwgJuCVGOzPt1_Q&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrimi85SYwXu5nXyg54zDyaF_hw-jxs3Mxf_gdpZjHpg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ3fVAEQLhcF_OJErc-uuYm2U2FnGjdE2yHL1nKY0XJQ&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQyfDNTenX5wtciVYCKkKOiOfGrPOGOWoTw8AATlwTA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ZOMdeYkV3dmS5PtPXmt1geIiX0L7KWoAsVKDrOe6XA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqU2XEkTbHP5adDC_Zae-W4JXuWK7_s4-KdcMOZs-6g&s" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsG9tYJ0GcpOKha5gyUlPFMWhEdg8Y_4PAfrGuIUJi2A&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwurr3HLo2D3P761qavDx27r4pQMwIvqV-M19XmJ292A&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5UdHCnPrB8rgCTRvfM6PnDxZuBWgp-sLYE7P-IFE0yA&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOV8g9Dkarot63m0aX4ujCqxvBoMnWajttBzNQap86fg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkTtPiLWXkQRxdWYJ8ZOEM68g9POrS53FjdruNdAZvDw&s" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuLOkMaHVWSbDMGynrzJiKth1pxUsAiKY7y28EPROrw&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXePiJrFQx507ogAoF7FckVLIbOwyDYyIU0SYOhGt9MQ&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAA2fevWYC5dp0pQNQAzSihadwh-zOwhio-RhxOKyZVw&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdz-wBeQ9zNhiSU4ieDYSwq_kcASZk-HbAoYhwM5PYNg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyBZFwqu4dqeUR19k2dbfu4ou6XmSR3iA8ZLyJaCc-Zg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJUspvExQFCTL4iYDw4weWyqPgKxdJXktsxW9bdzgPAw&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4jeQV2_lBk5lTjTk6VTBnMM2UDR2e5XQTbxS2Q-c0iQ&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyhF37Y07_6GRIzu7DX7fUWzDu3lpMQvE3mppv38ZmJg&s=10" alt="Golden Retriever">
+            </div>
+            <div class="gallery-item" data-category="architecture" data-title="Golden Retriever">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUuo7JbV6V45xI-wVJtlazsrMomq8nDI4Gd7tgFUzt&s" alt="Golden Retriever">
+            </div>
+
+    <!-- Premium Lightbox View Modal -->
+    <div id="lightbox-modal" class="lightbox">
+        <div class="lightbox-wrapper">
+            <span class="close-modal">&times;</span>
+            
+            <button class="nav-btn prev-btn">&#10094;</button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Popup active view">
+            </div>
+            <button class="nav-btn next-btn">&#10095;</button>
+
+            <!-- Bottom Information Panel -->
+            <div class="lightbox-info-panel">
+                <div class="text-meta">
+                    <h3 id="modal-title">Image Title</h3>
+                    <p id="modal-category">Category</p>
+                </div>
+                <div id="image-counter" class="counter-display">1 / 6</div>
+            </div>
+
+            <!-- Horizontal Thumbnail Preview Strip -->
+            <div class="thumbnail-strip" id="thumb-strip"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    padding: 40px 24px;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.gallery-header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.gallery-header p {
+    color: #64748b;
+    font-size: 1rem;
+}
+
+/* Controls Container Configuration */
+.controls-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #94a3b8;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+
+/* Search Bar Styling */
+.search-box input {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    width: 260px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #3b82f6;
+}
+
+/* Gallery Display Layout Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item.hidden {
+    display: none;
+}
+
+/* ==========================================
+   PREMIUM LIGHTBOX MODAL DESIGN LAYER
+   ========================================== */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 10, 19, 0.96);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-content {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #111827;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #1f2937;
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* UI Elements Overlay Layout */
+.close-modal {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    color: #94a3b8;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-modal:hover { color: #ffffff; }
+
+.nav-btn {
+    position: absolute;
+    top: 40%;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid #334155;
+    color: white;
+    font-size: 1.2rem;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.prev-btn { left: -22px; }
+.next-btn { right: -22px; }
+
+/* Text Metadata & Counter Panel */
+.lightbox-info-panel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 4px;
+}
+
+#modal-title { font-size: 1.1rem; font-weight: 500; margin-bottom: 2px; }
+#modal-category { font-size: 0.85rem; color: #3b82f6; text-transform: capitalize; }
+.counter-display { font-size: 0.9rem; color: #64748b; font-weight: 500; }
+
+/* Thumbnail Preview Strip Layer */
+.thumbnail-strip {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.thumb-item {
+    width: 64px;
+    height: 44px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.4;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.thumb-item.active {
+    opacity: 1;
+    border-color: #2563eb;
+}
